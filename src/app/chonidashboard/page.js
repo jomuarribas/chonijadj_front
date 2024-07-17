@@ -24,7 +24,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const newSocket = io('http://localhost:8080');
+    const newSocket = io('https://chonijapp.up.railway.app/');
 
     newSocket.on('welcome', (welcomeMessage) => {
       console.log(welcomeMessage);

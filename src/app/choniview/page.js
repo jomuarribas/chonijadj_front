@@ -9,7 +9,7 @@ export default function Choniview() {
   const [songView, setSongView] = useState(null);
 
   useEffect(() => {
-    const newSocket = io('http://localhost:8080');
+    const newSocket = io('https://chonijapp.up.railway.app');
 
     newSocket.on('welcome', (welcomeMessage) => {
       console.log(welcomeMessage);
