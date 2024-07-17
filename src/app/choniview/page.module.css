@@ -1,0 +1,138 @@
+.body {
+  margin: 0;
+  position: relative;
+  padding: 0;
+  height: 100vh; /* Asegúrate de que el cuerpo tenga la altura de la ventana */
+  background-image: url('/choniview.webp'); /* Ruta relativa a la carpeta public */
+  background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-attachment: fixed; /* Hace que la imagen permanezca fija al hacer scroll */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.731);
+  width: 740px;
+  height: 150px;
+  border-radius: 0 0 40px 40px;
+  box-shadow: white 0 0 10px;
+  animation: latido 1.4s infinite;
+}
+
+@keyframes latido {
+  0%, 100% {
+    box-shadow: white 0 0 30px;
+  }
+  50% {
+    box-shadow: white 0 0 10px;
+  }
+}
+
+.header > img {
+  transform: scale(0.9);
+}
+
+.songView > .vinil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px auto;
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.songView {
+  width: 1000px;
+  display: flex;
+  position: absolute;
+  border-radius: 40px;
+  transform: translate(-50%, -50%);
+  top: 470px;
+  left: 50%;
+}
+
+.songCard {
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 10px white;
+  border-radius: 40px;
+  animation: slideIn 2s ease-in-out;
+}
+
+.songCard > h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 0 0 40px 40px;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 400;
+  text-shadow: 2px 2px 2px black;
+}
+
+.songCard > h2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: #bb358892;
+  color: white;
+  padding: 10px;
+  margin: 0;
+  width: 1050px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 400;
+  text-shadow: 2px 2px 2px #bb35888d;
+  transform: rotate(-90deg);
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  animation: blink 5s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1; /* Visible al inicio */
+  }
+  20% {
+    opacity: 0; /* Invisible a la mitad de la animación */
+  }
+  50% {
+    opacity: 0; /* Invisible a la mitad de la animación */
+  }
+  100% {
+    opacity: 1; /* Visible al final */
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(160%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.songCard > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+}
