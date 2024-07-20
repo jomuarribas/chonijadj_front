@@ -19,7 +19,7 @@ export default function Choniview() {
 
       const timer = setTimeout(() => {
         setSongView(null);
-      }, 20000);
+      }, 40000);
       return () => clearTimeout(timer);
     });
 
