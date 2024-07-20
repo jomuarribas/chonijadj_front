@@ -46,9 +46,7 @@ export default function Home() {
 
   return (
     <div className={styles.body}>
-      if (loading) {
-        <Loader />
-      }
+      {loading ? <Loader /> : null}
       <header className={styles.header}>
         <Image
           src="/Chonijapp.webp"
