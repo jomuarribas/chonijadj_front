@@ -4,6 +4,7 @@ import io from 'socket.io-client';
 import Image from "next/image";
 import styles from "./page.module.css";
 import { useApi } from './hooks/useApi';
+import Loader from './components/Loader/Loader';
 
 export default function Home() {
   const [fileName, setFileName] = useState('Hacer foto');
@@ -45,6 +46,9 @@ export default function Home() {
 
   return (
     <div className={styles.body}>
+      if (loading) {
+        <Loader />
+      }
       <header className={styles.header}>
         <Image
           src="/Chonijapp.webp"
