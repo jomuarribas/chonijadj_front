@@ -1,0 +1,66 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  height: 100svh;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.songCard {
+  color: rgba(0, 0, 0, 0.94);
+  background-color: rgba(255, 255, 255, 0.308);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.main > .songCard > img {
+  border-radius: 20px;
+}
+
+.songCard > h2 {
+  font-size: 25px;
+  margin-top: 10px;
+}
+.songCard > p {
+  font-size: 20px;
+  color: #621d48;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+  margin-top: -5px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.587);
+  color: white;
+  padding: 10px;
+}
+
+.footer > p {
+  font-size: 13px;
+}
