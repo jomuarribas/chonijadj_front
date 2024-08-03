@@ -1,0 +1,132 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  height: 100svh;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+@keyframes latido {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.header > img {
+  filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.538));
+  animation: latido 1.4s infinite;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.form > div {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(250, 235, 215, 0.434);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  width: 92%;
+}
+
+.form > div > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 350px;
+}
+
+.form > div > form > h3 {
+  font-size: 25px;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.form > div > form > input {
+  margin: 10px;
+  padding: 15px;
+  border-radius: var(--border-radius);
+  border: none;
+  width: 100%;
+} 
+
+.form > div > form > p {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.587);
+  padding: 20px 10px;
+  border-radius: var(--border-radius);
+} 
+
+.form > div > form > p >input[type="file"] {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  margin-top: 15px;
+} 
+
+.inputfile + label {
+  max-width: var(--max-width);
+  border-radius: var(--border-radius);
+  font-family: var(--font-mono);
+  background-color: #bb3587;
+  color: white;
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  background-color: darken(#AA8C70, 10%);
+}
+
+.form > div > form > button {
+  background-color: #bb3587;
+  width: 150px;
+  height: 40px;
+  border-radius: var(--border-radius);
+  border: none;
+  color: white;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.587);
+  color: white;
+  padding: 10px;
+}
+
+.footer > p {
+  font-size: 13px;
+}

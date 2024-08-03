@@ -1,7 +1,14 @@
 .body {
   display: flex;
+  position: relative;
   flex-direction: column;
   height: 100svh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.main {
+  height: 100%;
   width: 100%;
 }
 
@@ -9,113 +16,121 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   margin-top: 20px;
   width: 100%;
-}
-
-@keyframes latido {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
 }
 
 .header > img {
   filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.538));
-  animation: latido 1.4s infinite;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-  width: 100%;
-  height: 100%;
+.header > p {
+  color: whitesmoke;
 }
 
-.form > div {
-  display: flex;
-  justify-content: center;
-  background-color: rgba(250, 235, 215, 0.434);
-  padding: 20px;
-  border-radius: var(--border-radius);
-  width: 92%;
-}
-
-.form > div > form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 350px;
-}
-
-.form > div > form > h3 {
-  font-size: 25px;
-  color: black;
-  margin-bottom: 15px;
-}
-
-.form > div > form > input {
-  margin: 10px;
-  padding: 15px;
-  border-radius: var(--border-radius);
-  border: none;
-  width: 100%;
-} 
-
-.form > div > form > p {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 15px;
-  text-align: center;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.587);
-  padding: 20px 10px;
-  border-radius: var(--border-radius);
-} 
-
-.form > div > form > p >input[type="file"] {
-  width: 0.1px;
-  height: 0.1px;
-  opacity: 0;
-  overflow: hidden;
+.image {
   position: absolute;
-  z-index: -1;
-  margin-top: 15px;
+  right: 0;
+  top: 170px;
+  height: 600px;
+  width: 180px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.image img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(rgba(0, 0, 0, 0.388) 0 0 15px);
+  animation: intro 1s;
+}
+
+@keyframes intro {
+0% {
+  transform: translateX(180px);
+}
+100% {
+  transform: translateX(0);
+}
+}
+
+.links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 30px;
+}
+
+.links > div {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 -20px;
+  width: 150%;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.364);
+  transform: rotateZ(-10deg);
+}
+
+.links > div > p {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translate(0, -50%);
+  font-size: 70px;
+  font-weight: 600;
+  color: rgba(250, 235, 215, 0.090);
+  z-index: -20;
+  text-align: left;
+  animation: fadein 4s
+}
+
+.links > div:nth-child(1) > a > img,
+.links > div:nth-child(2) > a > img {
+  margin-left: 90px;
+  cursor: pointer;
+}
+
+.links > div:nth-child(1) > a > img {
+  animation: fadein 3s;
+}
+
+.links > div:nth-child(2) > a > img{
+  opacity: 0;
+  animation: fadein 3s 0.3s forwards;
+}
+
+.links > div:nth-child(3) > a > img {
+  opacity: 0;
+  margin-left: -70px;
+  transform: scale(0.5);
+  animation: fadein 3s 0.6s forwards;
+  cursor: pointer;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity:1
+  }
+}
+
+.chonijacontact {
+  color: whitesmoke;
+  margin-top: 90px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.364);
+  width: 200px;
+  border-radius: 0 20px 20px 0;
 } 
 
-.inputfile + label {
-  max-width: var(--max-width);
-  border-radius: var(--border-radius);
-  font-family: var(--font-mono);
-  background-color: #bb3587;
-  color: white;
-  display: inline-block;
-  cursor: pointer;
-  padding: 10px 20px;
-  text-align: center;
-}
-
-.inputfile:focus + label,
-.inputfile + label:hover {
-  background-color: darken(#AA8C70, 10%);
-}
-
-.form > div > form > button {
-  background-color: #bb3587;
-  width: 150px;
-  height: 40px;
-  border-radius: var(--border-radius);
-  border: none;
-  color: white;
-  margin-top: 20px;
-  cursor: pointer;
+.chonijacontact > a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .footer {
