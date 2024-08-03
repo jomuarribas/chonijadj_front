@@ -16,22 +16,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 5px;
   width: 100%;
 }
 
 .header > img {
   filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.538));
+  transform: scale(0.75);
 }
 
 .header > p {
   color: whitesmoke;
+  margin-top: -20px;
 }
 
 .image {
   position: absolute;
   right: 0;
-  top: 170px;
+  top: 150px;
   height: 600px;
   width: 180px;
   display: flex;
