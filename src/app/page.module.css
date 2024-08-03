@@ -106,7 +106,7 @@
 
 .links > div:nth-child(3) > a > img {
   opacity: 0;
-  margin-left: -70px;
+  margin-left: -80px;
   transform: scale(0.5);
   animation: fadein 3s 0.6s forwards;
   cursor: pointer;
@@ -146,4 +146,11 @@
 
 .footer > p {
   font-size: 13px;
+}
+
+@media screen and (max-width: 400px) {
+  .links > div:nth-child(3) > a > img {
+    margin-left: -100px;
+    transform: scale(0.45);
+  }
 }
