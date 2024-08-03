@@ -7,21 +7,21 @@
   top: 0;
   width: 100%;
   min-height: 100svh;
-  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.073);
+  backdrop-filter: blur(5px) grayscale(100%);
   z-index: 1000;
 }
 
 .loader_spinner {
-  width: 70px;
-  height: 70px;
+  width: 120px;
+  height: 120px;
   background-image: url('/Spinner.svg');
   background-size: cover;
-  backdrop-filter: blur(4px);
   pointer-events: auto;
 }
 
 .loader > p {
   font-size: 14px;
-  color: #bf0811;
+  color: #bb3587;
   text-shadow: 1px 1px 5px #00000036;
 }

@@ -5,6 +5,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import { useApi } from '../hooks/useApi';
 import Loader from '../components/Loader/Loader';
+import Link from 'next/link';
 
 export default function Chonijapp() {
   const [fileName, setFileName] = useState('Hacer foto');
@@ -71,6 +72,9 @@ export default function Chonijapp() {
             </button>
           </form>
         </div>
+        <Link href='/'>
+          - VOLVER A HOME -
+        </Link>
       </main>
       <footer className={styles.footer}>
         <p>created by ©jomuarribas</p>
