@@ -68,7 +68,19 @@
   width: 100%;
 } 
 
-.form > div > form > p {
+.form > div > form > input:nth-of-type(1) {
+  background-color: #bb3587;
+  color: white;
+  cursor: pointer;
+}
+
+.form > div > form > p:nth-of-type(1) {
+  font-size: 18px;
+  margin: 5px 15px 15px 15px;
+  text-align: center
+}
+
+.form > div > form > p:nth-of-type(2) {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -79,6 +91,28 @@
   padding: 20px 15px;
   border-radius: var(--border-radius);
 } 
+
+.form > div > form > p:nth-of-type(3) {
+  font-size: 14px;
+  margin: 5px 15px 15px 15px;
+  text-align: justify;
+}
+
+.form > div > form > div {
+  font-size: 14px;
+  margin: 2px 15px;
+  text-align: justify;
+}
+
+.form > div > form > div > input[type= "checkbox"] {
+  margin-right: 10px;
+  text-align: justify;
+  transform: scale(1.8);
+  -webkit-transform: scale(1.8);
+  -moz-transform: scale(1.8);
+  -ms-transform: scale(1.8); 
+  -o-transform: scale(1.8);
+}
 
 .form > div > form > p >input[type="file"] {
   width: 0.1px;
@@ -114,8 +148,12 @@
   border-radius: var(--border-radius);
   border: none;
   color: white;
-  margin-top: 20px;
+  margin-top: 10px;
   cursor: pointer;
+}
+
+.reCaptcha {
+  transform: scale(0.8);
 }
 
 .form > a {
