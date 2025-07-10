@@ -116,7 +116,7 @@ export default function Chonijapp() {
               required
             />
             <p>
-              Este temazo se merece tu mejor pose...
+              Y tu mejor pose es...
               <input
                 type="file"
                 name="dedicatedImg"
